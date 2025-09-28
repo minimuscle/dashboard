@@ -1,6 +1,7 @@
 import NginxIcon from "./assets/nginx.svg";
 import ProxmoxIcon from "./assets/proxmox.svg";
 import { Card } from "./components/card";
+import { MinecraftCard } from "./components/card/minecraft";
 
 /**********************************************************************************************************
  *   COMPONENT START
@@ -48,9 +49,8 @@ export const App = () => {
 					Listed here are the servers currently online for games
 				</p>
 				<div className="w-full pt-5 px-3 flex gap-10 flex-wrap justify-center">
-					<Card
-						url="mc.joshandnathan.au"
-						noLink
+					<MinecraftCard
+						url="https://mc.joshandnathan.au"
 						title="Minecraft Server"
 						description="1.21.8 - Vanilla Survival"
 						linkDescription="mc.joshandnathan.au"
@@ -61,7 +61,7 @@ export const App = () => {
 					<Card
 						title="Minecraft Server Map"
 						description="Interactive Server Map"
-						url="http://mc.joshandnathan.au:8100/"
+						url="https://mc.joshandnathan.au/"
 						linkDescription="mc.joshandnathan.au:8100"
 						icon="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAACXBIWXMAAAsTAAALEwEAmpwYAAAB60lEQVR4nO2VsUodQRSG96oQSNJYGJSYV5BACrWX6FPYiF1MGyKW0UqfwAcIBLUS0yQQjKJiUOEGFBG0sUiVoFY2Xzjcf3AcZ+fO3nghkPyw3GXOv+fbc+bunKL4r79RwAPgNbANXOmy+ymLtQv6FDigXPvmaUelBwmoD7+/ymm0N1ev/hTWaZfud4Lkq2p9P7AWxLb0zItg/WsOcBw4Bh5q7TJI0u/5nwWxC613h60oEtAOYN3zOvCvCuCfkbxNwaMNCz9UdYfWN7mtNbXZoB+btdQFUuBleaaD9UnyNVEJDPQB17r6Ivu+lQHdcH/IKuBpxZdK4k+afMt7QE/wTJe2LAk+aYR5GTU0PI+BFe7KtuhRxO93ab0s6aEM42Vg+WrAey+h3ddKvEfyLFr1ZQldS45j+xR4n3vggYTPz9lVZuqUIbfqz8Cnsmor5eTmDQ+Le1JWTiImYE5zd7ZF8LBynqVMR2FbvHP6okXwgp5fSJlOZRr21mYFf9ci+Ew5h1Km+aZvVx3sVEuZBmU6t5Mq4bNT7BtQB0ZywEXGZ7Irbz0GF9Rivj7YpAp8vcDbLLDJzttI4pi+AzP6x6PfN8CYjlAbNk5fihwJ7iqPadd1QzPZKg51rRcYdXO9LbK9VqdONOlujdbin9dvmTzOLxJbklUAAAAASUVORK5CYII="
 						gradient1="teal"
@@ -85,7 +85,7 @@ export const App = () => {
 					<Card
 						title="NAS Storage"
 						description="via TrueNAS"
-						url="https://192.168.1.24/ui"
+						url="https://192.168.1.24"
 						linkDescription="192.168.1.24"
 						icon="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAZUlEQVR4nO3TQQqAMAxE0ZxLdG/x/hdovceXLtwJNiXoIvPWgQ+BMZN0gAM4idOAMhLuh9HqSPi2AGtU2RzhHt2+DDd+enUJjldgfw3ng3YcxBxh7XiWdvxMOyaIOcLa8SztOKkLAhgV2UjIV3IAAAAASUVORK5CYII="
 						gradient1="cyan"
@@ -94,8 +94,8 @@ export const App = () => {
 					<Card
 						title="Proxy Manager"
 						description="via NGINX Proxy Manager"
-						url="http://192.168.1.106:81/"
-						linkDescription="192.168.1.106:81"
+						url="https://proxy.joshandnathan.au"
+						linkDescription="proxy.joshandnathan.au"
 						icon={NginxIcon}
 						gradient1="yellow"
 						gradient2="orange"

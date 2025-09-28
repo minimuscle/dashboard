@@ -5,7 +5,7 @@ import { twMerge } from "tailwind-merge";
 /**********************************************************************************************************
  *   TYPE DEFINITIONS
  **********************************************************************************************************/
-type TailwindBaseColor =
+export type TailwindBaseColor =
 	| "slate"
 	| "gray"
 	| "zinc"
@@ -29,13 +29,12 @@ type TailwindBaseColor =
 	| "pink"
 	| "rose";
 
-type Card = React.FC<{
+export type Card = React.FC<{
 	url: string;
 	title: string;
 	icon: string;
 	description: string;
 	linkDescription: string;
-	noLink?: boolean;
 	gradient1: TailwindBaseColor;
 	gradient2?: TailwindBaseColor;
 }>;
@@ -51,7 +50,6 @@ export const Card: Card = ({
 	url,
 	gradient1,
 	gradient2,
-	noLink,
 }) => {
 	/***** STATE *****/
 	const [isOnline, setIsOnline] = useState(false);
@@ -74,9 +72,8 @@ export const Card: Card = ({
 	});
 
 	/***** RENDER *****/
-	const Component = noLink ? "div" : "a";
 	return (
-		<Component
+		<a
 			href={url}
 			target="_blank"
 			rel="noreferer noopener"
@@ -126,17 +123,15 @@ export const Card: Card = ({
 					<h4 className="text-xl font-bold">{title}</h4>
 					<p className="opacity-50">{description}</p>
 				</div>
-				{!noLink && (
-					<img
-						className="opacity-50"
-						src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAACXBIWXMAAAsTAAALEwEAmpwYAAAA50lEQVR4nO3WPUpDQRSA0SEgVnaCYGXhAiy0tEplG5u4B+MmjIuw0i24AMVGSMA1CAmkEjsRRPHIgxd8jpbOfRLybeAww52flJb9p3DjqzHWouB737tCJwLewmOGD4vDVdjHawP+wFGKCINs1S/Yi8LPM3yGzQh4BbcZfofVCHwdDxl+WRyuwg6eM3yQIkKvnu557ziIwofZqp+wHQF36pus2Xih4bPwrcZhNlxv6LZxnI5LoxuYZujFYl6Zfj4Sk2oHSqMnvzyLu6XRbj2186pp7rfx9Tktirb92btuoKOw7+2y9Ad9AgQCGZzIW/lQAAAAAElFTkSuQmCC"
-						alt="chevron-right"
-					/>
-				)}
+				<img
+					className="opacity-50"
+					src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAACXBIWXMAAAsTAAALEwEAmpwYAAAA50lEQVR4nO3WPUpDQRSA0SEgVnaCYGXhAiy0tEplG5u4B+MmjIuw0i24AMVGSMA1CAmkEjsRRPHIgxd8jpbOfRLybeAww52flJb9p3DjqzHWouB737tCJwLewmOGD4vDVdjHawP+wFGKCINs1S/Yi8LPM3yGzQh4BbcZfofVCHwdDxl+WRyuwg6eM3yQIkKvnu557ziIwofZqp+wHQF36pus2Xih4bPwrcZhNlxv6LZxnI5LoxuYZujFYl6Zfj4Sk2oHSqMnvzyLu6XRbj2186pp7rfx9Tktirb92btuoKOw7+2y9Ad9AgQCGZzIW/lQAAAAAElFTkSuQmCC"
+					alt="chevron-right"
+				/>
 			</div>
 			<p className="absolute bottom-1.5 right-3 opacity-50">
 				{linkDescription}
 			</p>
-		</Component>
+		</a>
 	);
 };
