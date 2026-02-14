@@ -1,0 +1,149 @@
+.Card {
+  width: 350px;
+  background-color: #302e3f;
+  // border: 3px solid #79759c;
+  height: 150px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 20px 0;
+  align-items: center;
+  position: relative;
+  border-radius: 20px;
+  // box-shadow: 0 0 10px 2px transparentize($color: #ffffff, $amount: 0.75);
+
+  &__heartbeat {
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    text-align: right;
+
+    p {
+      text-align: right;
+      font-size: 18px;
+      font-weight: 500;
+    }
+
+    &--online {
+      p {
+        color: #00ff00;
+      }
+
+      ::before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        translate: 0 -50%;
+        left: -15px;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background-color: #00ff00;
+      }
+    }
+    &--offline {
+      p {
+        color: #e20000;
+      }
+      ::before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        translate: 0 -50%;
+        left: -15px;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background-color: #ff0000;
+      }
+    }
+
+    &Minecraft {
+      p {
+        font-size: 24px;
+        color: #ffffff;
+      }
+    }
+  }
+
+  img {
+    width: 70px;
+    height: 70px;
+  }
+  h1 {
+    font-size: 28px;
+    font-weight: 500;
+    color: #ffffff;
+  }
+
+  &.movies {
+    background: linear-gradient(to bottom right, #690092, #005174);
+  }
+
+  &.requests {
+    background: linear-gradient(to bottom right, #621da8, #001e71);
+  }
+
+  &.audiobooks {
+    background: linear-gradient(to bottom right, #9a671b, #3a2a0e);
+  }
+
+  &.minecraft {
+    background: linear-gradient(to bottom right, #3c003c, #000b29);
+    background-image: url("/src/assets/wp6005709-desktop-hd-minecraft-shaders-wallpapers.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    position: relative;
+    z-index: 1;
+
+    .minecraft--overlay {
+      height: 100%;
+      width: 100%;
+      position: absolute;
+      background-color: rgb(0, 0, 0);
+      top: 0;
+      left: 0;
+      opacity: 0.2;
+      z-index: -1;
+      border-radius: 20px;
+    }
+  }
+
+  &.minecraft-map {
+    background: linear-gradient(to bottom right, #3c003c, #000b29);
+    background-image: url("/src/assets/18752341-d_l.webp");
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: 1;
+
+    .Card__overlay {
+      height: 100%;
+      width: 100%;
+      position: absolute;
+      background-color: rgb(0, 0, 0);
+      top: 0;
+      left: 0;
+      opacity: 0.4;
+      z-index: -1;
+      border-radius: 20px;
+    }
+  }
+
+  &.minecraft-panel {
+    background: linear-gradient(to bottom right, #0056b8, #001856);
+  }
+
+  &.proxmox {
+    background: linear-gradient(to bottom right, #aa5200, #693300);
+  }
+
+  &.truenas {
+    background: linear-gradient(to bottom right, #0084b0, #004765);
+  }
+
+  &.nginx {
+    background: linear-gradient(to bottom right, #cda400, #8700a5);
+  }
+}

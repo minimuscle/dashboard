@@ -1,0 +1,51 @@
+.MainContainer {
+  background: radial-gradient(circle at 50% 0%, #0a0433, #000000);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  min-height: 100vh;
+  height: 100%;
+  width: 100%;
+
+  &__heading {
+    text-align: center;
+    padding-top: 10px;
+
+    h2 {
+      font-size: 24px;
+    }
+
+    h1 {
+      font-size: 72px;
+      font-weight: 800;
+      line-height: 1;
+    }
+    p {
+      padding-top: 20px;
+      font-size: 18px;
+    }
+  }
+  .Hr {
+    margin-top: 50px;
+  }
+
+  h3 {
+    margin-top: 50px;
+    font-size: 32px;
+    font-weight: 700;
+    text-align: center;
+  }
+  p {
+    font-size: 18px;
+    text-align: center;
+  }
+
+  &__services {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+}
